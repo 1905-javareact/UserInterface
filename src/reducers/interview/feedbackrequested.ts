@@ -1,7 +1,7 @@
-import { IAssociateChartState } from ".";
+import { IFeedbackRequestedChartState } from ".";
 import { feedbackRequestedChartTypes } from "../../actions/feedbackReq-chart/feedbackrequested.actions"
 
-const initialState : IAssociateChartState = {
+const initialState : IFeedbackRequestedChartState = {
     data: {
         datasets: [{
             data: [0,0],
@@ -33,7 +33,7 @@ const initialState : IAssociateChartState = {
     canvas: undefined,
 }
 
-export const feedbackRequestedChartReducer = (state = initialState, action : any): IAssociateChartState => {
+export const feedbackRequestedChartReducer = (state = initialState, action : any): IFeedbackRequestedChartState => {
     switch (action.type) {
         case feedbackRequestedChartTypes.GET_INFO:
             if (action.payload.chartInfo) {

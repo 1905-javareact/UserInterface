@@ -1,7 +1,7 @@
-import { IManagerChartState } from ".";
+import { IFeedbackDeliveredChartState } from ".";
 import { feedbackDeliveredChartTypes } from "../../actions/feedbackDel-chart/feedbackdelivered.actions"
 
-const initialState : IManagerChartState = {
+const initialState : IFeedbackDeliveredChartState = {
     data: {
         datasets: [{
             data: [0,0],
@@ -33,7 +33,7 @@ const initialState : IManagerChartState = {
     canvas: undefined,
 }
 
-export const feedbackDeliveredChartReducer = (state = initialState, action : any): IManagerChartState => {
+export const feedbackDeliveredChartReducer = (state = initialState, action : any): IFeedbackDeliveredChartState => {
     switch (action.type) {
         case feedbackDeliveredChartTypes.GET_INFO:
             if (action.payload.chartInfo) {
