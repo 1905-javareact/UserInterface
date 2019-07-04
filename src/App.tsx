@@ -24,6 +24,7 @@ class App extends React.Component {
             
             <div id="main-content-container">
               <Switch>
+                  <Route exact path='/' component ={DashboardRoutes}/>
                   <Route path='/management' component={ManagementRoutes}/>
                   <Route path='/interview' component={InterviewRoutes}/>
                   <Route path='/surveys' component ={SurveyRoutes}/>
